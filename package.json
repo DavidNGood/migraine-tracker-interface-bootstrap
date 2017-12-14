@@ -1,0 +1,22 @@
+{
+  "name": "migraine-tracker-interface-bootstrap",
+  "version": "1.0.0",
+  "description": "Web interface to migraine tracker app built using Bootstrap",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidNGood/migraine-tracker-interface-bootstrap.git"
+  },
+  "author": "David Good",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/DavidNGood/migraine-tracker-interface-bootstrap/issues"
+  },
+  "homepage": "https://github.com/DavidNGood/migraine-tracker-interface-bootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
