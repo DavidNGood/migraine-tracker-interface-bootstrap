@@ -50,7 +50,13 @@
         </header>
         <section>
             <h1>Headache Data</h1>
-
+            <div class="text-center">
+                <div class="btn-group text-center my-4" role="group" aria-label="navigation">
+                    <button type="button" class="btn btn-primary">&#60; Previous Weeks</button>
+                            <button type="button" class="btn btn-primary">Current Date</button>
+                            <button type="button" class="btn btn-secondary">Following Weeks &#62;</button>
+                </div>
+            </div>
             <!-- Headache Calendar -->
             <div id="headacheCalendar">
                 <ul class="weekdays">
@@ -67,16 +73,20 @@
                         <div class="date">12/03</div>
                     </li>
                     <li>
-                        <div class="date">12/04</div>
-                        <div class="time">3:00 PM to 10:00 PM</div>
-                        <div class="pain"><strong>Pain: </strong>5</div>
-                        <div class="medication"><strong>Med: </strong>Ibuprofen</div>
-                        <div class="text-center">
-                        <div class="btn-group mt-2" role="group" aria-label="Edit Buttons">
-                            <button type="button" class="btn btn-warning">Edit</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
+                        <div class="date">
+                            <a href="#">12/04</a>
                         </div>
-                    </div>
+                        <div class="time">3:00 PM to 10:00 PM</div>
+                        <div class="pain">
+                            <strong>Pain: </strong>5</div>
+                        <div class="medication">
+                            <strong>Med: </strong>Ibuprofen</div>
+                        <div class="text-center">
+                            <div class="btn-group mt-2 edit-buttons" role="group" aria-label="Edit Buttons">
+                                <button type="button" class="btn btn-warning">Edit</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <div class="date">12/05</div>
@@ -165,62 +175,6 @@
                 </ul>
             </div>
             <!-- End Headache Calendar -->
-
-            <div>
-                <a href="headache-entry.html" class="button-new">New Headache Day</a>
-            </div>
-            <table class="headache-data">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Date</th>
-                        <th>Start Time</th>
-                        <th>End Time</th>
-                        <th>Pain Level</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="headache-data-buttons">
-                            <a href="index.html" class="button-edit">Edit</a>
-                            <a href="index.html" class="button-delete">Delete</a>
-                        </td>
-                        <td class="headache-data-date">1/1/2017</td>
-                        <td class="headache-data-time">10:00 AM</td>
-                        <td class="headache-data-time">4:00 PM</td>
-                        <td class="headache-data-pain">5</td>
-                    </tr>
-                    <tr>
-                        <td class="headache-data-buttons">
-                            <a href="index.html" class="button-edit">Edit</a>
-                            <a href="index.html" class="button-delete">Delete</a>
-                        </td>
-                        <td class="headache-data-date">1/1/2017</td>
-                        <td class="headache-data-time">10:00 AM</td>
-                        <td class="headache-data-time">4:00 PM</td>
-                        <td class="headache-data-pain">5</td>
-                    </tr>
-                    <tr>
-                        <td class="headache-data-buttons">
-                            <a href="index.html" class="button-edit">Edit</a>
-                            <a href="index.html" class="button-delete">Delete</a>
-                        </td>
-                        <td class="headache-data-date">1/1/2017</td>
-                        <td class="headache-data-time">10:00 AM</td>
-                        <td class="headache-data-time">4:00 PM</td>
-                        <td class="headache-data-pain">5</td>
-                    </tr>
-                    <tr>
-                        <td class="headache-data-buttons">
-                            <a href="index.html" class="button-edit">Edit</a>
-                            <a href="index.html" class="button-delete">Delete</a>
-                        </td>
-                        <td class="headache-data-date">1/1/2017</td>
-                        <td class="headache-data-time">10:00 AM</td>
-                        <td class="headache-data-time">4:00 PM</td>
-                        <td class="headache-data-pain">5</td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
         <footer>
             <p>
