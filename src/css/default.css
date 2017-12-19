@@ -26,3 +26,35 @@ footer {
     color: #fff;
     padding: 10px;
 }
+
+#headacheCalendar {
+    font-size:smaller;
+}
+
+
+@media (min-width: 768px){
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1  {
+        width: 100%;
+        *width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+            -ms-flex: 0 0 14.2857%;
+            flex: 0 0 14.2857%;
+            max-width: 14.2857%;
+    }
+}
+@media (min-width: 1200px) {
+    .seven-cols .col-md-1,
+    .seven-cols .col-sm-1,
+    .seven-cols .col-lg-1 {
+        -ms-flex: 0 0 14.2857%;
+        flex: 0 0 14.2857%;
+        max-width: 14.2857%;
+    }
+}

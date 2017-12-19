@@ -1,87 +1,189 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Migraine Tracker User Interface</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/default.css">
-    </head>
-    <body>
-        <div class="container">
-            <header>    
-                <nav class="navbar navbar-dark navbar-expand-lg" id="mainNav">
-                    <h2><a class="navbar-brand" href="index.html">Migraine Tracker</a></h2>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" 
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarToggler">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
-                            <li class="nav-item"><a class="nav-link" href="headache-entry.html">Add a Headache</a></li>
-                            <li class="nav-item"><a class="nav-link" href="report-yearly.html">Yearly Stats</a></li>
-                            <li class="nav-item"><a class="nav-link" href="report-last-month.html">Last Month</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="headache-data.html">Headache Data</a></li>
-                        </ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Migraine Tracker User Interface</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/default.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-dark navbar-expand-lg" id="mainNav">
+                <h2>
+                    <a class="navbar-brand" href="index.html">Migraine Tracker</a>
+                </h2>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html">Account</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="headache-entry.html">Add a Headache</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="report-yearly.html">Yearly Stats</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="report-last-month.html">Last Month</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="headache-data.html">Headache Data</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section>
+            <h1>Headache Data</h1>
+
+            <!-- Headache Calendar -->
+            <div class="row seven-cols" id="headacheCalendar">
+                <div class="col-lg-1">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Sun</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">11/26/2017</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">3:00 PM to 10:00 PM</li>
+                                <li class="list-group-item">Pain: 5</li>
+                            </ul>
+                        </div>
                     </div>
-                </nav>
-            </header>
-            <section>
-                <h1>Headache Data</h1>
-                <div><a href="headache-entry.html" class="button-new">New Headache Day</a></div>
-                <table class="headache-data">
-                        <thead>
-                            <tr><th></th><th>Date</th><th>Start Time</th><th>End Time</th><th>Pain Level</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="headache-data-buttons">
-                                    <a href="index.html" class="button-edit">Edit</a>
-                                    <a href="index.html" class="button-delete">Delete</a></td>
-                                <td class="headache-data-date">1/1/2017</td>
-                                <td class="headache-data-time">10:00 AM</td>
-                                <td class="headache-data-time">4:00 PM</td>
-                                <td class="headache-data-pain">5</td>
-                            </tr>
-                            <tr>
-                                <td class="headache-data-buttons">
-                                    <a href="index.html" class="button-edit">Edit</a> 
-                                    <a href="index.html" class="button-delete">Delete</a></td>
-                                <td class="headache-data-date">1/1/2017</td>
-                                <td class="headache-data-time">10:00 AM</td>
-                                <td class="headache-data-time">4:00 PM</td>
-                                <td class="headache-data-pain">5</td>
-                            </tr>
-                            <tr>
-                                <td class="headache-data-buttons">
-                                    <a href="index.html" class="button-edit">Edit</a> 
-                                    <a href="index.html" class="button-delete">Delete</a></td>
-                                <td class="headache-data-date">1/1/2017</td>
-                                <td class="headache-data-time">10:00 AM</td>
-                                <td class="headache-data-time">4:00 PM</td>
-                                <td class="headache-data-pain">5</td>
-                            </tr>
-                            <tr>
-                                <td class="headache-data-buttons">
-                                    <a href="index.html" class="button-edit">Edit</a> 
-                                    <a href="index.html" class="button-delete">Delete</a></td>
-                                <td class="headache-data-date">1/1/2017</td>
-                                <td class="headache-data-time">10:00 AM</td>
-                                <td class="headache-data-time">4:00 PM</td>
-                                <td class="headache-data-pain">5</td>
-                            </tr>
-                        </tbody>
-                    </table>
-            </section>
-            <footer>
-                <p><small>&copy; 2017 David Good</small></p>
-            </footer>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    </body>
+                </div>
+                <div class="col-lg-1">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Mon</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">11/27/2017</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Tues</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">11/28/2017</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Wed</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">11/29/2017</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Thurs</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">11/30/2017</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Fri</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">12/1/2017</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Sat</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">12/2/2017</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Headache Calendar -->
+
+            <div>
+                <a href="headache-entry.html" class="button-new">New Headache Day</a>
+            </div>
+            <table class="headache-data">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Pain Level</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="headache-data-buttons">
+                            <a href="index.html" class="button-edit">Edit</a>
+                            <a href="index.html" class="button-delete">Delete</a>
+                        </td>
+                        <td class="headache-data-date">1/1/2017</td>
+                        <td class="headache-data-time">10:00 AM</td>
+                        <td class="headache-data-time">4:00 PM</td>
+                        <td class="headache-data-pain">5</td>
+                    </tr>
+                    <tr>
+                        <td class="headache-data-buttons">
+                            <a href="index.html" class="button-edit">Edit</a>
+                            <a href="index.html" class="button-delete">Delete</a>
+                        </td>
+                        <td class="headache-data-date">1/1/2017</td>
+                        <td class="headache-data-time">10:00 AM</td>
+                        <td class="headache-data-time">4:00 PM</td>
+                        <td class="headache-data-pain">5</td>
+                    </tr>
+                    <tr>
+                        <td class="headache-data-buttons">
+                            <a href="index.html" class="button-edit">Edit</a>
+                            <a href="index.html" class="button-delete">Delete</a>
+                        </td>
+                        <td class="headache-data-date">1/1/2017</td>
+                        <td class="headache-data-time">10:00 AM</td>
+                        <td class="headache-data-time">4:00 PM</td>
+                        <td class="headache-data-pain">5</td>
+                    </tr>
+                    <tr>
+                        <td class="headache-data-buttons">
+                            <a href="index.html" class="button-edit">Edit</a>
+                            <a href="index.html" class="button-delete">Delete</a>
+                        </td>
+                        <td class="headache-data-date">1/1/2017</td>
+                        <td class="headache-data-time">10:00 AM</td>
+                        <td class="headache-data-time">4:00 PM</td>
+                        <td class="headache-data-pain">5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer>
+            <p>
+                <small>&copy; 2017 David Good</small>
+            </p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
