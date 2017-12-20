@@ -1,105 +1,231 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Migraine Tracker User Interface</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/default.css">
 </head>
+
 <body>
     <div class="container">
-        <header>    
+        <header>
             <nav class="navbar navbar-dark navbar-expand-lg" id="mainNav">
-                <h2><a class="navbar-brand" href="index.html">Migraine Tracker</a></h2>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" 
+                <h2>
+                    <a class="navbar-brand" href="index.html">Migraine Tracker</a>
+                </h2>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                        <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="headache-entry.html">Add a Headache</a></li>
-                        <li class="nav-item"><a class="nav-link" href="report-yearly.html">Yearly Stats</a></li>
-                        <li class="nav-item"><a class="nav-link" href="report-last-month.html">Last Month</a></li>
-                        <li class="nav-item"><a class="nav-link" href="headache-data.html">Headache Data</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="account.html">Account</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="headache-entry.html">Add a Headache</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="report-yearly.html">Yearly Stats</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="report-last-month.html">Last Month</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="headache-data.html">Headache Data</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </header>
         <section>
-            <h1>Enter a Headache Day</h1>
-            
+            <h1>Add a Headache Day</h1>
+
             <form action="" method="POST" id="new-headache">
                 <fieldset>
-                    <label for="headacheStartDate">Headache Date:</label> 
-                    <input type="text" name="headacheStartDate" id="headacheStartDate"><br>
-                    <label for="headacheStartTime">Headache Start Time:</label> 
-                    <input type="text" name="headacheStartDate" id="headacheStartDate"><br>
-                    <label for="headacheEndTime">Headache End Time:</label> <input type="text" name="headacheEndTime" id="headacheEndTime"><br>
-                    <fieldset class="radio-array">
-                        <legend>Maximum Pain Level</legend>
-                        <input type="radio" name="maxPain" id="maxPain0" checked> <label for="maxPain0">0</label><br>
-                        <input type="radio" name="maxPain" id="maxPain1"> <label for="maxPain1">1</label><br>
-                        <input type="radio" name="maxPain" id="maxPain2"> <label for="maxPain2">2</label><br>
-                        <input type="radio" name="maxPain" id="maxPain3"> <label for="maxPain3">3</label><br>
-                        <input type="radio" name="maxPain" id="maxPain4"> <label for="maxPain4">4</label><br>
-                        <input type="radio" name="maxPain" id="maxPain5"> <label for="maxPain5">5</label><br>
-                        <input type="radio" name="maxPain" id="maxPain6"> <label for="maxPain6">6</label><br>
-                        <input type="radio" name="maxPain" id="maxPain7"> <label for="maxPain7">7</label><br>
-                        <input type="radio" name="maxPain" id="maxPain8"> <label for="maxPain8">8</label><br>
-                        <input type="radio" name="maxPain" id="maxPain9"> <label for="maxPain9">9</label><br>
-                        <input type="radio" name="maxPain" id="maxPain10"> <label for="maxPain10">10</label>
-                    </fieldset>                
-                    <label for="medication">Medication:</label> <input type="text" name="medication" id="medication"><br>
-                    <label for="nonMedication">Non-Medication Treatment:</label> <input type="text" name="nonMedication" id="nonMedication"><br>
-                    <fieldset class="radio-array">
+                    <div class="form-group">
+                        <label for="headacheStartDate">Headache Date:</label>
+                        <input type="text" name="headacheStartDate" id="headacheStartDate" class="form-control col-lg-4">
+                    </div>
+                    <div class="form-group">
+                        <label for="headacheStartTime">Headache Start Time:</label>
+                        <input type="text" name="headacheStartDate" id="headacheStartDate" class="form-control col-lg-4">
+                    </div>
+                    <div class="form-group">
+                        <label for="headacheEndTime">Headache End Time:</label>
+                        <input type="text" name="headacheEndTime" id="headacheEndTime" class="form-control col-lg-4">
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="radio-array">
+                            <legend>Maximum Pain Level</legend>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain0" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain0" checked class="form-check-input">0</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain1" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain1" class="form-check-input">1</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain2" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain2" class="form-check-input">2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain3" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain3" class="form-check-input">3</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain4" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain4" class="form-check-input">4</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain5" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain5" class="form-check-input">5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain6" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain6" class="form-check-input">6</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain7" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain7" class="form-check-input">7</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain8" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain8" class="form-check-input">8</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain9" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain9" class="form-check-input">9</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="maxPain10" class="form-check-label">
+                                    <input type="radio" name="maxPain" id="maxPain10" class="form-check-input">10</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <label for="medication">Medication:</label>
+                        <input type="text" name="medication" id="medication" class="form-control col-lg-4">
+                    </div>
+                    <div class="form-group">
+                        <label for="nonMedication">Non-Medication Treatment:</label>
+                        <input type="text" name="nonMedication" id="nonMedication" class="form-control col-lg-4">
+                    </div>
+
+                    <fieldset class="radio-array" class="form-group">
                         <legend>Pain level after treatment</legend>
-                        <input type="radio" name="relief" id="relief0" checked> <label for="relief0">0</label> <br>
-                        <input type="radio" name="relief" id="relief1"> <label for="relief1">1</label><br>
-                        <input type="radio" name="relief" id="relief2"> <label for="relief2">2</label><br>
-                        <input type="radio" name="relief" id="relief3"> <label for="relief3">3</label><br> 
-                        <input type="radio" name="relief" id="relief4"> <label for="relief4">4</label><br>
-                        <input type="radio" name="relief" id="relief5"> <label for="relief5">5</label><br>
-                        <input type="radio" name="relief" id="relief6"> <label for="relief6">6</label><br>
-                        <input type="radio" name="relief" id="relief7"> <label for="relief7">7</label><br>
-                        <input type="radio" name="relief" id="relief8"> <label for="relief8">8</label><br>
-                        <input type="radio" name="relief" id="relief9"> <label for="relief9">9</label><br>
-                        <input type="radio" name="relief" id="relief10"> <label for="relief10">10</label> 
+                        <div class="form-check form-check-inline">
+                            <label for="relief0" class="form-check-label">
+                                <input type="radio" name="relief" id="relief0" checked class="form-check-input">0</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief1" class="form-check-label">
+                                <input type="radio" name="relief" id="relief1" class="form-check-input">1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief2" class="form-check-label">
+                                <input type="radio" name="relief" id="relief2" class="form-check-input">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief3" class="form-check-label">
+                                <input type="radio" name="relief" id="relief3" class="form-check-input">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief4" class="form-check-label">
+                                <input type="radio" name="relief" id="relief4" class="form-check-input">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief5" class="form-check-label">
+                                <input type="radio" name="relief" id="relief5" class="form-check-input">5</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief6" class="form-check-label">
+                                <input type="radio" name="relief" id="relief6" class="form-check-input">6</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief7" class="form-check-label">
+                                <input type="radio" name="relief" id="relief7" class="form-check-input">7</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief8" class="form-check-label">
+                                <input type="radio" name="relief" id="relief8" class="form-check-input">8</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief9" class="form-check-label">
+                                <input type="radio" name="relief" id="relief9" class="form-check-input">9</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="relief10" class="form-check-label">
+                                <input type="radio" name="relief" id="relief10" class="form-check-input">10</label>
+                        </div>
                     </fieldset>
-                    <fieldset class="radio-array">
+                    <fieldset class="radio-array form-group">
                         <legend>Location of Pain (Check all that apply)</legend>
-                        <input type="checkbox" name="location" id="locationLeftSide" value="left side">
-                        <label for="leftSide">Left Side of Head</label><br> 
-                        <input type="checkbox" name="location" id="locationRightSide" value="right side">
-                        <label for="rightSide">Right Side of Head</label><br> 
-                        <input type="checkbox" name="location" id="locationLeftEye" value="left eye">
-                        <label for="leftEye">Left Eye</label><br> 
-                        <input type="checkbox" name="location" id="locationRightEye" value="right eye">
-                        <label for="rightEye">Right Eye</label><br>
-                        <input type="checkbox" name="location" id="locationForehead" value="forehead">
-                        <label for="locationForehead">Forehead</label><br>
-                        <input type="checkbox" name="location" id="locationBackHead" value="back of head">
-                        <label for="locationBackHead">Back of Head</label><br>
-                        <input type="checkbox" name="location" id="locationNeck" value="neck">
-                        <label for="locationNeck">Neck</label>
-                    </fieldset>  
-                    <label for="triggers">Triggers:</label> 
-                    <input type="text" name="triggers" id="triggers"><br>
-                    <label for="notes">Notes:</label> 
-                    <textarea name="notes" id="notes" ></textarea>                    
+                        <div class="form-check form-check-inline">
+                            <label for="locationLeftSide" class="form-check-label">
+                                <input type="checkbox" name="location" id="locationLeftSide" value="left side" class="form-check-input">Left Side of Head</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="locationRightSide" class="form-check-label">
+                                <input type="checkbox" name="location" id="locationRightSide" value="right side" class="form-check-input">Right Side of Head</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="locationLeftEye" class="form-check-label">
+                                <input type="checkbox" name="location" id="locationLeftEye" value="left eye" class="form-check-input">Left Eye</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="locationRightEye" class="form-check-label">
+                                <input type="checkbox" name="location" id="locationRightEye" value="right eye" class="form-check-input">Right Eye</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="locationForehead" class="form-check-label">
+                                <input type="checkbox" name="location" id="locationForehead" value="forehead" class="form-check-input">Forehead</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="locationBackHead" class="form-check-label">
+                                <input type="checkbox" name="location" id="locationBackHead" value="back of head" class="form-check-input">Back of Head</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label for="locationNeck" class="form-check-label">
+                                <input type="checkbox" name="location" id="locationNeck" value="neck" class="form-check-input"> Neck
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="triggers">Triggers:</label>
+                        <input type="text" name="triggers" id="triggers" class="form-control col-lg-4">
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Notes:</label>
+                        <textarea name="notes" id="notes" class="form-control col-lg-4"></textarea>
+                    </div>
                 </fieldset>
                 <button type="submit" name="submit" id="submit">Add Headache</button>
             </form>
         </section>
         <footer>
-            <p><small>&copy; 2017 David Good</small></p>
+            <p>
+                <small>&copy; 2017 David Good</small>
+            </p>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

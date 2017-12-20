@@ -98,9 +98,9 @@ footer {
         padding: 10px;
     }
 
-    #headacheCalendar li:nth-child(7n)
+    #headacheCalendar li:nth-child(7n+1)
     {
-        border-bottom:1px solid red;
+        border-top:1px solid red;
     }
 
     #headacheCalendar .date {
