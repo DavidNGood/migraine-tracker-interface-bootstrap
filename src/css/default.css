@@ -81,6 +81,26 @@ footer {
     font-size:smaller;
 }
 
+/* Yearly Stats Pages */
+.yearly-stats tr:nth-child(odd) {
+    background: #ccc;
+}
+
+.yearly-stats th {
+    background:#fff;
+}
+
+.yearly-stats td, .yearly-stats th {
+    padding:10px 20px;
+    margin:0;
+    text-align:center;
+}
+
+.yearly-stats th {
+    font-weight:bold;
+    vertical-align: top;
+}
+
 @media(max-width: 992px) {
 
     #headacheCalendar .weekdays, #calendar .other-month {
